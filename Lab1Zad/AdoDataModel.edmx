@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityType Name="Globalne">
+          <Key>
+            <PropertyRef Name="Id_uzytkownika" />
+          </Key>
+          <Property Name="Id_uzytkownika" Type="int" Nullable="false" />
+          <Property Name="Nazwa_Uzytkownika" Type="varchar" MaxLength="30" />
+          <Property Name="Data_Uruchomienia" Type="varchar" MaxLength="20" />
+          <Property Name="Godzina_Uruchomienia" Type="varchar" MaxLength="20" />
+          <Property Name="Ilu_uzytkownikow" Type="int" />
+          <Property Name="czy_aktywny" Type="varchar" MaxLength="6" />
+          <Property Name="ile_razy_uruchomil" Type="int" />
+          <Property Name="klikniecia_przycisk" Type="int" />
+          <Property Name="klikniecia_obraz" Type="int" />
+          <Property Name="ilu_zarejestrowanych" Type="int" />
+          <Property Name="numer_okna" Type="int" />
+          <Property Name="iterator" Type="int" />
+          <Property Name="Id_sesji" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="dbModelStoreContainer">
+          <EntitySet Name="Globalne" EntityType="Self.Globalne" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityType Name="Globalne">
+          <Key>
+            <PropertyRef Name="Id_uzytkownika" />
+          </Key>
+          <Property Name="Id_uzytkownika" Type="Int32" Nullable="false" />
+          <Property Name="Nazwa_Uzytkownika" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Data_Uruchomienia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Godzina_Uruchomienia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Ilu_uzytkownikow" Type="Int32" />
+          <Property Name="czy_aktywny" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="ile_razy_uruchomil" Type="Int32" />
+          <Property Name="klikniecia_przycisk" Type="Int32" />
+          <Property Name="klikniecia_obraz" Type="Int32" />
+          <Property Name="ilu_zarejestrowanych" Type="Int32" />
+          <Property Name="numer_okna" Type="Int32" />
+          <Property Name="iterator" Type="Int32" />
+          <Property Name="Id_sesji" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="dbEntities">
+          <EntitySet Name="Globalne" EntityType="Self.Globalne" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="dbEntities">
+          <EntitySetMapping Name="Globalne">
+            <EntityTypeMapping TypeName="dbModel.Globalne">
+              <MappingFragment StoreEntitySet="Globalne">
+                <ScalarProperty Name="Id_uzytkownika" ColumnName="Id_uzytkownika" />
+                <ScalarProperty Name="Nazwa_Uzytkownika" ColumnName="Nazwa_Uzytkownika" />
+                <ScalarProperty Name="Data_Uruchomienia" ColumnName="Data_Uruchomienia" />
+                <ScalarProperty Name="Godzina_Uruchomienia" ColumnName="Godzina_Uruchomienia" />
+                <ScalarProperty Name="Ilu_uzytkownikow" ColumnName="Ilu_uzytkownikow" />
+                <ScalarProperty Name="czy_aktywny" ColumnName="czy_aktywny" />
+                <ScalarProperty Name="ile_razy_uruchomil" ColumnName="ile_razy_uruchomil" />
+                <ScalarProperty Name="klikniecia_przycisk" ColumnName="klikniecia_przycisk" />
+                <ScalarProperty Name="klikniecia_obraz" ColumnName="klikniecia_obraz" />
+                <ScalarProperty Name="ilu_zarejestrowanych" ColumnName="ilu_zarejestrowanych" />
+                <ScalarProperty Name="numer_okna" ColumnName="numer_okna" />
+                <ScalarProperty Name="iterator" ColumnName="iterator" />
+                <ScalarProperty Name="Id_sesji" ColumnName="Id_sesji" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

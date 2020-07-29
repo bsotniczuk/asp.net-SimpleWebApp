@@ -1,0 +1,122 @@
+﻿body {
+    margin: 0;
+}
+
+/**/
+
+/* Create three equal columns that floats next to each other */
+.column_side {
+    float: left;
+    width: 13.5%;
+    height:100%;
+    padding: 1%;
+}
+
+.column_middle {
+    float: right;
+    width: 80%;
+    /*padding: 15px;*/
+}
+/**/
+
+.zalogowany_uzytkownik {
+    text-decoration: underline;
+}
+
+.middle {
+    position: absolute;
+    border: dotted;
+    left: 35%;
+    right: 20%;
+    top: 40%;
+    bottom: 40%;
+}
+
+.przelacz_rysunek {
+    height: 20%;
+    width: 25%;
+    position: absolute; /*dostosuj do parent*/
+    left: 37.5%;
+    top: 40%;
+    font-size: 80%;
+    font-stretch: inherit;
+}
+
+
+.ImageButton {
+    height: 75%;
+    width: 75%;
+    position: absolute;
+    left: 12%;
+    top: 12%;
+}
+
+.pozycja1 {
+    height: 30%;
+    width: 15%;
+    border: dotted;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+}
+
+.pozycja2 {
+    height: 30%;
+    width: 15%;
+    border: dotted;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+}
+
+.pozycja3 {
+    height: 30%;
+    width: 15%;
+    border: dotted;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+
+.pozycja4 {
+    height: 30%;
+    width: 15%;
+    border: dotted;
+    position: absolute;
+    left: 20%;
+    bottom: 10%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*
+#footer {
+    background-color: forestgreen;
+    text-align: center;
+    color: white;
+    clear: both;
+    border-radius: 4px;
+    /*robienie zaokraglonych kwadratow na koncach*/
+    /*
+    <div id ="footer">
+        copyright - contact your mom
+    </div>
+    */
+/*}*/
+
+/*
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+<div class="header" >
+<h1 > Header</h1 >
+</div >
+*/
