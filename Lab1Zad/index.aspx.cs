@@ -19,6 +19,7 @@ namespace Lab1Zad
         protected void Page_Load(object sender, EventArgs e)
         {
             //label_ilosc_wcisniec.Text = "Wybrany index dla DropDownList1: " + DropDownList1.SelectedValue + "UserName: " + UserName;
+            label_ilosc_wcisniec.Visible = false; //debug
             if (!IsPostBack)
             {
             }
@@ -254,7 +255,17 @@ namespace Lab1Zad
                 whole_1.Visible = true;
                 Label5.Visible = false;
 
-                UserName = TextBoxUserName.Text;
+                //convert to ASCII to prevent user from using non-compatible characters
+                string s = TextBoxUserName.Text;
+                byte[] bytes = System.Text.Encoding.ASCII.GetBytes(s);
+                int result = BitConverter.ToInt32(bytes, 0);
+            
+                int i = result;
+                byte[] bytes2 = BitConverter.GetBytes(i);
+                string s2 = System.Text.Encoding.ASCII.GetString(bytes);
+               
+                UserName = s2;
+                TextBoxUserName.Text = s2;
                 Global.lista_uzytkownikow.Add(UserName);
                 Global.ile_uzytkownikow++;
                 zalogowany_uzytkownik.Text = UserName;
